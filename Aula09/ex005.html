@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(54, 54, 196);
+            color: white;
+            font-family: cursive;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p class="teste">Aqui vai o resultado</p>
+    <p class="teste">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div class="msg">Clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = document.getElementsByClassName('teste')[0]
+        var p2 = document.getElementsByClassName('teste')[1]
+        var n = document.getElementsByTagName('strong')[0]
+        var titulo = document.querySelector('h1')
+        window.document.write("Está escrito assim: " + p1.innerText)
+
+        p1.style.color = 'red'
+        p2.style.color = 'yellow'
+        corpo.style.background = 'black'
+        n.style.color = 'brown'
+        titulo.style.color = 'purple'
+
+        /*var d = document.getElementsByClassName('msg')[0]
+        d.style.background = 'black'
+        d.style.fontFamily = 'Arial'*/
+
+        /*var d = document.getElementById("msg")
+        d.style.background = 'yellow'
+        d.innerText = 'Estou aguardando'
+        d.style.color = 'black'
+
+        p1.style.color = 'grey'
+        corpo.style.background = 'black'*/
+
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'white'
+        d.style.color = 'black'
+
+
+        /*innerText = pega o texto do sem formatação*/
+        /*innerHTML = pega o texto com a formatação da cor e muito mais*/
+
+        /*Podemos pegar as tags html por nomes, ids, classes, marcas e seletores
+            [0] (Para colocar qual é o elemento)
+
+            marcas = getElementsByTagName()
+            name = getElementsByName() 
+            id = getElementsById()
+            class = getElementsByClassName()
+            Seletor = querySelector() -> Usa tags de HTML como id(#) e classe(.)
+        
+        */
+    </script>
+</body>
+</html>
