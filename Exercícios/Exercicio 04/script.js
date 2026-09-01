@@ -1,16 +1,17 @@
 function tabuada(){
     var txtnum = document.querySelector('#txtnum')
-    var res = document.querySelector('#res')
+    var tab = document.querySelector('#seltab')
 
     var num = Number(txtnum.value)
-    var resultado
     if(txtnum.value.length == 0){
         alert(`[ERRO]: Adicione um número para gerar a tabuada!`)
     }
     else{
+        tab.innerHTML = ''
         for(var i = 1; i <= 10; i++){
-            resultado = num * i
-            res.innerHTML += `${num} x ${i} = ${resultado} <br>`
+            var item = document.createElement('option')
+            item.text = `${num} x ${i} = ${num * i}`
+            tab.appendChild(item)
         }
     }
     
